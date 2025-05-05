@@ -18,6 +18,6 @@ public interface InventoryClient {
 
     default boolean fallbackMethod(String code, Integer quantity, Throwable throwable) {
         log.info("Cannot get inventory for skucode {}, failure reason: {}", code, throwable.getMessage());
-        return false;
+        throw new RuntimeException("Circuit breaker encountered a failure: " + throwable.getMessage());
     }
 }
