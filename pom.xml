@@ -67,6 +67,9 @@
                         <name>fyzhang0621/${project.artifactId}</name>
                         <builder>dashaun/builder:tiny</builder>
                         <publish>true</publish>
+                        <env>
+                            <BP_JVM_VERSION>21</BP_JVM_VERSION>
+                        </env>
                     </image>
                     <docker>
                         <publishRegistry>
